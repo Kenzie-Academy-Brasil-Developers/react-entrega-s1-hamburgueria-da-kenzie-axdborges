@@ -1,13 +1,11 @@
 import { useState  } from "react";
 import { CardSt } from "../../styled/styledCard/styledCard";
 
-function Card ({produto, carrinhoTotal, setCarrinhoTotal, carrinho, setCarrinho, quantidade, setQuantidade}) {
+function Card ({produto, carrinhoTotal, setCarrinhoTotal, quantidade, setQuantidade}) {
     
     const addCart = (prod) => {
         setCarrinhoTotal(carrinhoTotal + prod.price)
-        // const muda = [...carrinho]
-        // muda[prod.id - 1] += 1
-        // setCarrinho(muda)
+
         const achar = quantidade.find(elem => {
             return elem.id === prod.id
         })

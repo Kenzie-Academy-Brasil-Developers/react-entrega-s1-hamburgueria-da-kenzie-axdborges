@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
             'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
             sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -39,5 +39,13 @@ export const GlobalStyle = createGlobalStyle`
         
     }
 
+    @media screen and (max-width: 900px){
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-top: -100px;
+        }
+    }
  
 `;

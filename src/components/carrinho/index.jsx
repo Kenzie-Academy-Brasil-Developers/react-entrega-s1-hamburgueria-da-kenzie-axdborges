@@ -2,24 +2,26 @@ import { useState  } from "react";
 import ItemCarrinho from "../itemCarrinho/itemCarrinho";
 import { StCarrinho } from "../../styled/styledCarrinho/styledCarrinho";
 
-function Carrinho ({carrinhoTotal, setCarrinhoTotal, carrinho, setCarrinho, quantidade, setQuantidade}) {
+function Carrinho ({carrinhoTotal, setCarrinhoTotal, quantidade, setQuantidade}) {
 
     const removeTodos = () => {
         setCarrinhoTotal(0)
         setQuantidade([])
     }
-    console.log(quantidade)
-    
-    // console.log(carrinho ,zerado)
     return (
         <StCarrinho>
             <div className="carrinho-header">Carrinho de compras</div>
-            {
+            {   
+               
                 quantidade.length ? 
                 <>
                     {
                         quantidade.map((item, index) => {
-                            return (<ItemCarrinho produto={item} key={index}/> )
+                            return (<ItemCarrinho produto={item} key={index} 
+                                quantidade={quantidade}
+                                setQuantidade={setQuantidade}
+                                carrinhoTotal={carrinhoTotal}
+                                setCarrinhoTotal={setCarrinhoTotal}/> )
                         })
                     }
                     

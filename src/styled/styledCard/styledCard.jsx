@@ -56,4 +56,11 @@ export const CardSt = styled.div`
         color: #F5F5F5;
         cursor: pointer;
     }
+
+    @media screen and (max-width: 900px){
+
+        /* height: 306px;
+        width: 400px; */
+        
+    }
 `;

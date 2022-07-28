@@ -75,5 +75,8 @@ export const StCarrinho = styled.div`
 
     }
 
+    @media screen and (max-width: 900px){
+        display: none
+    }
 
 `;

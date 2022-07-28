@@ -62,4 +62,32 @@ export const HeaderSt = styled.header`
         cursor: pointer;
     }
 
+    @media screen and (max-width: 900px){
+
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-around;
+        height: 90px;
+
+        form {
+            margin-right: 0px;
+            display: flex;
+            gap: 0px;
+            padding: 1px;
+            width: 90%;
+            justify-content: space-evenly;
+        }
+
+        .header-titulos {
+            gap: 10px;
+            margin-left: 0px;
+            
+        }
+
+        button, input {
+            /* display: none; */
+            /*  */
+        }
+    }
+
 `;

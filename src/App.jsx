@@ -9,9 +9,9 @@ function App() {
 
 const [produtos, setProdutos] = useState([])
 const [produtosFiltrados, setProdutosFiltrados] = useState([]);
-const [carrinho, setCarrinho] = useState([0,0,0,0,0,0])
 const [carrinhoTotal, setCarrinhoTotal] = useState(0)
 const [quantidade, setQuantidade] = useState([])
+const [inputValue, setInputValue] = useState("")
 
   useEffect(() => {
       fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
@@ -20,23 +20,31 @@ const [quantidade, setQuantidade] = useState([])
       .catch((err) => console.log(err))
   } , [])
 
+  function filtra (input) {
+    const filtrado = produtos.filter((elem) => {
+        return elem.category.toUpperCase() === input.toUpperCase()
+    })
+      return filtrado
+  }
   return (
     <div className="App-header">
       <GlobalStyle/>
-      <Header/>
+      <Header
+      inputValue={inputValue}
+      setInputValue={setInputValue}/>
       <main className="principal">
-        <ProductList produtos={produtos} 
+        {/* <h3>Resultados por: </h3> */}
+        <ProductList 
+        produtos={inputValue === "" ? produtos : filtra(inputValue) }
         setCarrinhoTotal={setCarrinhoTotal}
         carrinhoTotal={carrinhoTotal}
-        carrinho={carrinho}
-        setCarrinho={setCarrinho}
         quantidade={quantidade}
         setQuantidade={setQuantidade}
-        />
+        >
+    
+        </ProductList>
         <Carrinho carrinhoTotal={carrinhoTotal}
         setCarrinhoTotal={setCarrinhoTotal}
-        carrinho={carrinho}
-        setCarrinho={setCarrinho}
         quantidade={quantidade}
         setQuantidade={setQuantidade}/>
       </main>
