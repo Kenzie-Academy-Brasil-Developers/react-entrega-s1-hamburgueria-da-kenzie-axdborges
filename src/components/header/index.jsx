@@ -3,7 +3,13 @@ import { HeaderSt } from "../../styled/styledHeader/styledHeader";
 
 function Header ({inputValue, setInputValue}) {
     
+    const pesquisaT = {
+        margin: "20px"
+    }
 
+    const pesquisaS = {
+        color: "#828282"
+    }
 
     return (
         <>
@@ -22,8 +28,8 @@ function Header ({inputValue, setInputValue}) {
             {
                 inputValue !== "" && 
                 <>
-                    <h3>
-                        Você pesquisou por: <span>{inputValue}</span>
+                    <h3 style={pesquisaT}>
+                        Você pesquisou por: <span style={pesquisaS}>{inputValue}</span>
                     </h3>
                 </>
             }

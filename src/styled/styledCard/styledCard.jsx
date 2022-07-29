@@ -59,8 +59,10 @@ export const CardSt = styled.div`
 
     @media screen and (max-width: 900px){
 
-        /* height: 306px;
-        width: 400px; */
-        
+        /* height: 306px; */
+        /* margin-top: -220px; */
+        height: 260px;
+        margin-left: 10px;
+        width: 220px; 
     }
 `;

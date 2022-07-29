@@ -8,6 +8,7 @@ export const StItemCarrinho = styled.div`
     background-color: var(--cinza-3);
     justify-content: space-around;
     align-items:center;
+    gap: 5px;
 
     figure {
         background-color: var(--cinza-2);
@@ -51,6 +52,26 @@ export const StItemCarrinho = styled.div`
         background-color: var(--cinza-3);
         color: #828282;
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 900px) {
+        gap: 2px;
+        
+        figure{
+            width: 60px;
+            border-radius: 10px;
+        }       
+
+        .item-titulo{
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .item-button {
+            width: 60px;
+            font-size: 10px;
+        }
     }
 
 `;

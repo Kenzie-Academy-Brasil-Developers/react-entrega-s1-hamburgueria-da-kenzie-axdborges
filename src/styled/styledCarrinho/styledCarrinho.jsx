@@ -76,7 +76,28 @@ export const StCarrinho = styled.div`
     }
 
     @media screen and (max-width: 900px){
-        display: none
+        /* display: none */
+        width: 100%;
+        max-height: 50%;
+        overflow: hidden;
+        box-sizing: border-box;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        margin-left: -10px;
+
+        div {
+            scroll-snap-align: start;
+            flex-shrink: 0; 
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.9s;
+            position: relative;
+        }
+
+        
+
     }
 
 `;

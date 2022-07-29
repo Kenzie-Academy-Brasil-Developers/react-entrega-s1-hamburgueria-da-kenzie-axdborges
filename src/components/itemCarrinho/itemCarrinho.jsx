@@ -26,7 +26,7 @@ function ItemCarrinho ({produto, quantidade, setQuantidade, carrinhoTotal, setCa
         setQuantidade([...quantidade])
         
     }
-
+    // 
 
     return (
         <StItemCarrinho>
@@ -34,7 +34,9 @@ function ItemCarrinho ({produto, quantidade, setQuantidade, carrinhoTotal, setCa
                 <img src={produto.img} alt="" className="item-img" />
             </figure>
             <div className="item-textos">
-                <h4 className="item-titulo">{produto.name}</h4>
+                <h4 className="item-titulo">{produto.name.length > 16 ? 
+                produto.name.slice(0, 16)+"..." 
+                : produto.name }</h4>
                 <p className="item-categoria">{produto.category}</p>
             </div>
             <p>qtd: {produto.qtd}</p>
