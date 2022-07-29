@@ -22,7 +22,8 @@ const [inputValue, setInputValue] = useState("")
 
   function filtra (input) {
     const filtrado = produtos.filter((elem) => {
-        return elem.category.toUpperCase() === input.toUpperCase()
+
+        return elem.category.toUpperCase() === input.toUpperCase() || elem.name.toUpperCase() === input.toUpperCase()
     })
       return filtrado
   }

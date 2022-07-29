@@ -41,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
 
     @media screen and (max-width: 900px){
         main {
-            height: 150vh;
+            height: 600px;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;

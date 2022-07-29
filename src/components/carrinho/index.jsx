@@ -28,7 +28,7 @@ function Carrinho ({carrinhoTotal, setCarrinhoTotal, quantidade, setQuantidade})
                     <div className="carrinho-total">
                         <div className="organizar-total">
                             <p className="carrinho-p">Total</p>
-                            <p className="carrinho-preco">R$ {carrinhoTotal}</p>
+                            <p className="carrinho-preco">R$ {carrinhoTotal.toFixed(2)}</p>
                         </div>
                         <button className="carrinho-remover"
                         onClick={() => {return removeTodos()}}>Remover todos</button>
